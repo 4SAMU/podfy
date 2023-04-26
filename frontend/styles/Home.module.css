@@ -22,17 +22,17 @@
 
 .podcastcontainer {
   position: relative;
-  top: 100px;
+  top: 50px;
   flex: none;
   order: 1;
   flex-grow: 0;
-  width: 80vw;
+  width: 90vw;
   height: auto;
   min-height: 600px !important;
   left: 50%;
   transform: translateX(-50%);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .card {
@@ -98,7 +98,7 @@
 
 .footer {
   position: relative;
-  top: 150px;
+  top: 100px;
   width: 100vw;
   height: 200px;
   background-color: #4b93a0;
@@ -113,19 +113,38 @@
   font-size: 40px;
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 1500px) {
   .podcastcontainer {
     top: 10px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 97vw;
     left: 10px;
     transform: none;
   }
   .card {
     margin-left: 1px;
-    width: 47vw;
+    width: 20vw;
   }
   .footer {
     top: 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .podcastcontainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .podcastcontainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 47vw;
   }
 }
