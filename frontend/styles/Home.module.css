@@ -1,0 +1,114 @@
+.main {
+  position: relative;
+  width: 100vw;
+}
+
+.heading {
+  position: relative;
+  top: 0px;
+  width: 100vw;
+  height: 200px;
+  background-color: #4b93a0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* add display flex to enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  text-align: center;
+  flex-direction: column;
+  font-family: "love";
+  font-size: 40px;
+}
+
+.podcastcontainer {
+  position: relative;
+  top: 100px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  width: 80vw;
+  height: auto;
+  min-height: 600px !important;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+  position: relative;
+  margin-left: 10px;
+  height: 200px;
+  width: 200px;
+  background-color: #4b93a0;
+  border-radius: 4px;
+  margin-top: 4px;
+  transform: 5s all ease-in-out;
+}
+
+.title {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  width: 98%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Maximum number of lines to display */
+  -webkit-box-orient: vertical;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-family: "if";
+}
+
+.descrip {
+  position: relative;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  overflow-y: scroll;
+  cursor: all-scroll;
+  overflow-x: hidden;
+  width: 98%;
+  height: 100px;
+  font-size: 30px;
+  font-family: "modern";
+}
+
+.url {
+  position: relative;
+  top: 20px;
+  height: max-content;
+  width: 98%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: italic;
+  background: #5d62b1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(209, 214, 202, 0.3);
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: relative;
+  top: 150px;
+  width: 100vw;
+  height: 200px;
+  background-color: #4b93a0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* add display flex to enable flexbox */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  text-align: center;
+  flex-direction: column;
+  font-family: "love";
+  font-size: 40px;
+}
