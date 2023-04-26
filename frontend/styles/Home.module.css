@@ -112,3 +112,20 @@
   font-family: "love";
   font-size: 40px;
 }
+
+@media screen and (max-width: 413px) {
+  .podcastcontainer {
+    top: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    width: 97vw;
+    left: 10px;
+    transform: none;
+  }
+  .card {
+    margin-left: 1px;
+    width: 47vw;
+  }
+  .footer {
+    top: 20px;
+  }
+}
