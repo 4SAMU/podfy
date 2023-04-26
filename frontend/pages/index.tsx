@@ -5,6 +5,7 @@ import Link from "next/link";
 import { client } from "@/SanityConfiguration/SanityClient";
 import { PodcastData } from "@/SanityConfiguration/types";
 import ReactAudioPlayer from "react-audio-player";
+import { Fade } from "react-awesome-reveal";
 
 export default function Home() {
   const router = useRouter();
@@ -55,32 +56,38 @@ export default function Home() {
   return (
     <div className={main}>
       <div className={heading}>
-        <h1>Welcome to podfy</h1>
+        <h1>
+          <Fade direction="down">Welcome to podfy</Fade>
+        </h1>
         <h4></h4>
       </div>
       <div className={podcastcontainer}>
         {episode.map((pod, index: any) =>
           pod.audioFileUrl && !loading ? (
             <div key={index}>
-              <Link href={`/${pod.title}`}>
-                <div className={card}>
-                  <div className={title}>{pod.title}</div>
-                  <div className={descrip}>{pod.description}</div>
-                  <div>
+              {/* <Link href={`/${pod.title}`}> */}
+              <div className={card}>
+                <div className={title}>{pod.title}</div>
+                <div className={descrip}>{pod.description}</div>
+                <div>
+                  <Fade direction="up">
                     <ReactAudioPlayer
                       src={pod.audioFileUrl}
                       controls
                       className={url}
                     />
-                  </div>
+                  </Fade>
                 </div>
-              </Link>
+              </div>
+              {/* </Link> */}
             </div>
           ) : null
         )}
       </div>
       <div className={footer}>
-        <h3>Thanks</h3>
+        <h3>
+          <Fade direction="up">Thanks</Fade>
+        </h3>
       </div>
     </div>
   );
